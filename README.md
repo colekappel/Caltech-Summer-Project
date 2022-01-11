@@ -63,7 +63,7 @@ On the same computer that you uploaded the Arduino sketch - use Bernard at HCST 
 
 Environmental Sensor Locations at HCST
 
- 
+ ![Fig 1](Images/Fig1.png)
 
 Fig. 1 The environmental sensor layout at HCST.
 
