@@ -3,7 +3,7 @@ Documentation for the applications that comprise the environmental sensing syste
 
  ![Fig 1](Images/Fig1.png)
 
-The environmental sensor layout at HCST.
+**The environmental sensor layout at HCST.**
 
 # Documentation for the MATLAB Environmental Sensing Programs
 
@@ -17,14 +17,14 @@ Location of the program at HCST: C:\Users\ET\Documents\OctoprogramLive.m.
 
  ![Fig 2](Images/Fig2.png)
  
-Output of OctoprogramLive.m. Plots real time data from HCST.
+**Output of OctoprogramLive.m. Plots real time data from HCST.**
 
 **OctoprogramLiveSave.m** – Use this program if for whatever reason something goes wrong with getting the time stamp on the Arduino. No data is preallocated for this program so when you first open it the plots will be empty and they will fill up over time. This program saves the environmental data on the desktop in the EnviSensData folder, where data is written to excel files with a comprehensive naming convention. If you close any of the figures, the program stops running. Note that the program won’t write any data to the excel files while they are opened so make sure to close the excel files quickly after opening them! For KPIC, you will need to define the IP address used with your computer, for HCST it is 192.168.1.3 (The Arduino website.)
 Location of the program at HCST: C:\Users\ET\Documents\OctoprogramLiveSave.m.
 
  ![Fig 3](Images/Fig3.png)
 
-Output of OctoprogramLiveSave.m. The plots will fill up with data over time while saving that data to the desktop on the Bernard computer. This is to be used as a backup program only in case something happens to OctoprogramLive.m.
+**Output of OctoprogramLiveSave.m. The plots will fill up with data over time while saving that data to the desktop on the Bernard computer. This is to be used as a backup program only in case something happens to OctoprogramLive.m.**
 
 **Time Check**
  
@@ -39,7 +39,7 @@ Location of the program at HCST: C:\Users\ET\Documents\OctoprogramTimeCheck.m.
 
  ![Fig 4](Images/Fig4.png)
 
- Output of both OctoprogramTimeCheckFunc.m and OctoprogramTimeCheck.m. The user can check any desired time span of environmental sensor data with these programs.
+ **Output of both OctoprogramTimeCheckFunc.m and OctoprogramTimeCheck.m. The user can check any desired time span of environmental sensor data with these programs.**
 
 **Software**
 All programs have been run and tested using MATLAB R2021a.
@@ -74,28 +74,6 @@ If you do use this program then as fast as possible after uploading the sketch w
 
  # Environmental Sensing System Instructions and Output
 
-Upload the Arduino sketch. Make sure the real time clock (RTC) is set to the correct time. See “Arduino Program Documentation” for instructions uploading the Arduino sketch.
-On the same computer that you uploaded the Arduino sketch - use Bernard at HCST -, run the MATLAB programs. See “OctoprogramDocumentation” for instructions using these programs.
+1.) Upload the Arduino sketch. Make sure the real time clock (RTC) is set to the correct time. See “Arduino Program Documentation” for instructions uploading the Arduino sketch.
+2.) On the same computer that you uploaded the Arduino sketch - use Bernard at HCST -, run the MATLAB program you want to use. See “OctoprogramDocumentation” for instructions using these programs.
 
- ![Fig 1](Images/Fig1.png)
-
-The environmental sensor layout at HCST.
-
-The sensors should be screwed in with plastic screws. If they stop working try surrounding them with non-conducting material/ make sure that they are not touching any conducting metal. Additionally, make sure that the Arduino hardware is not touching any conducting metal. It should be fine inside the plastic box.
- 
-Output of the MATLAB Programs
-
- 
- ![Fig 2](Images/Fig2.png)
- 
-Output of OctoprogramLive.m. Plots real time data from HCST.
-
- 
- ![Fig 3](Images/Fig3.png)
-
-Output of OctoprogramLiveSave.m. The plots will fill up with data over time while saving that data to the desktop on the Bernard computer. This is to be used as a backup program only in case something happens to OctoprogramLive.m.
-
-
- ![Fig 4](Images/Fig4.png)
-
- Output of both OctoprogramTimeCheckFunc.m and OctoprogramTimeCheck.m. The user can check any desired time span of environmental sensor data with these programs.
