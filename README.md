@@ -10,7 +10,7 @@ Documentation for the applications that comprise the environmental sensing syste
 By: Cole Kappel
 
 
-**Live Plots**
+**Live Plots:**
  
 **OctoprogramLive.m** – Plots the past 7 minutes, 3 hours and 24 hours of live sensor data from HCST. This program doesn’t save data, it pulls the data from the Arduino which is accessed through the ip address. The program also preallocates data from the past day so the plots will be full when opened as long as the Arduino has been running for 24 hours before opening the programs. If you close any of the figures, the program stops running. For KPIC, you will need to define the IP address used with your computer, for HCST it is 192.168.1.3 (The Arduino website.)
 Location of the program at HCST: C:\Users\ET\Documents\OctoprogramLive.m.
@@ -26,7 +26,7 @@ Location of the program at HCST: C:\Users\ET\Documents\OctoprogramLiveSave.m.
 
 **Output of OctoprogramLiveSave.m. The plots will fill up with data over time while saving that data to the desktop on the Bernard computer. This is to be used as a backup program only in case something happens to OctoprogramLive.m.**
 
-**Time Check**
+**Time Check:**
  
 **OctoprogramTimeCheckFunc.m** – This program defines a function which should be called from the command window. Call it like this: OctoprogramTimeCheckFunc(startYr, startMonth, startDay, startHr, endYr, endMonth, endDay, endHr). The start date must be earlier than the end date. The hour should be entered as a number from 1-24. For example, if you want to look at data from August 1st, 2021 at 5pm to August 4th, 2021 at 3am you would type into the command window: 
 OctoprogramTimeCheckFunc(2021, 08, 1, 17, 2021, 08, 4, 3).
