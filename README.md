@@ -72,7 +72,7 @@ Though, if something goes wrong with Metrology_RTC_TimeServer.ino, I would sugge
 
 If you do use this program then as fast as possible after uploading the sketch with #define SETTIME uncommented, upload the sketch with #define SETTIME commented. Then google the IP address and make sure the time is very close to the actual time. Again, the RTC time will most likely lag by several minutes depending on how fast you upload the sketch after setting the time using this sketch.
 
- # Environmental Sensing System Instructions and Output
+ # Environmental Sensing System Instructions
 
 1.) Upload the Arduino sketch. Make sure the real time clock (RTC) is set to the correct time. See “Arduino Program Documentation” for instructions uploading the Arduino sketch.
  
