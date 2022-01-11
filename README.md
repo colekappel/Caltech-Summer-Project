@@ -1,6 +1,10 @@
 # Caltech-Summer-Project
 Documentation for the applications that comprise the environmental sensing system used by the ET lab at HCST
 
+ ![Fig 1](Images/Fig1.png)
+
+The environmental sensor layout at HCST.
+
 # Documentation for the MATLAB Environmental Sensing Programs
 
 By: Cole Kappel
@@ -11,8 +15,16 @@ By: Cole Kappel
 **OctoprogramLive.m** – Plots the past 7 minutes, 3 hours and 24 hours of live sensor data from HCST. This program doesn’t save data, it pulls the data from the Arduino which is accessed through the ip address. The program also preallocates data from the past day so the plots will be full when opened as long as the Arduino has been running for 24 hours before opening the programs. If you close any of the figures, the program stops running. For KPIC, you will need to define the IP address used with your computer, for HCST it is 192.168.1.3 (The Arduino website.)
 Location of the program at HCST: C:\Users\ET\Documents\OctoprogramLive.m.
 
+ ![Fig 2](Images/Fig2.png)
+ 
+Output of OctoprogramLive.m. Plots real time data from HCST.
+
 **OctoprogramLiveSave.m** – Use this program if for whatever reason something goes wrong with getting the time stamp on the Arduino. No data is preallocated for this program so when you first open it the plots will be empty and they will fill up over time. This program saves the environmental data on the desktop in the EnviSensData folder, where data is written to excel files with a comprehensive naming convention. If you close any of the figures, the program stops running. Note that the program won’t write any data to the excel files while they are opened so make sure to close the excel files quickly after opening them! For KPIC, you will need to define the IP address used with your computer, for HCST it is 192.168.1.3 (The Arduino website.)
 Location of the program at HCST: C:\Users\ET\Documents\OctoprogramLiveSave.m.
+
+ ![Fig 3](Images/Fig3.png)
+
+Output of OctoprogramLiveSave.m. The plots will fill up with data over time while saving that data to the desktop on the Bernard computer. This is to be used as a backup program only in case something happens to OctoprogramLive.m.
 
 **Time Check**
  
@@ -24,6 +36,10 @@ Location of the program at HCST: C:\Users\ET\Documents\OctoprogramTimeCheck.m.
 
 **OctoprogramTimeCheck.m** – This program is the same code as OctoprogramTimeCheckFunc.m but it is not a function. Edit lines 19 through 27 to define the start and end times. I would suggest using this program for error testing, but you can also use it if you think it’s easier to use than the function. For KPIC, you will need to define the IP address used with your computer, for HCST it is 192.168.1.3 (The Arduino website.)
 Location of the program at HCST: C:\Users\ET\Documents\OctoprogramTimeCheck.m.
+
+ ![Fig 4](Images/Fig4.png)
+
+ Output of both OctoprogramTimeCheckFunc.m and OctoprogramTimeCheck.m. The user can check any desired time span of environmental sensor data with these programs.
 
 **Software**
 All programs have been run and tested using MATLAB R2021a.
@@ -61,11 +77,9 @@ If you do use this program then as fast as possible after uploading the sketch w
 Upload the Arduino sketch. Make sure the real time clock (RTC) is set to the correct time. See “Arduino Program Documentation” for instructions uploading the Arduino sketch.
 On the same computer that you uploaded the Arduino sketch - use Bernard at HCST -, run the MATLAB programs. See “OctoprogramDocumentation” for instructions using these programs.
 
-**Environmental Sensor Locations at HCST**
-
  ![Fig 1](Images/Fig1.png)
 
-**Fig. 1** The environmental sensor layout at HCST.
+The environmental sensor layout at HCST.
 
 The sensors should be screwed in with plastic screws. If they stop working try surrounding them with non-conducting material/ make sure that they are not touching any conducting metal. Additionally, make sure that the Arduino hardware is not touching any conducting metal. It should be fine inside the plastic box.
  
@@ -74,14 +88,14 @@ Output of the MATLAB Programs
  
  ![Fig 2](Images/Fig2.png)
  
-**Fig. 2** Output of OctoprogramLive.m. Plots real time data from HCST.
+Output of OctoprogramLive.m. Plots real time data from HCST.
 
  
  ![Fig 3](Images/Fig3.png)
 
-**Fig. 3** Output of OctoprogramLiveSave.m. The plots will fill up with data over time while saving that data to the desktop on the Bernard computer. This is to be used as a backup program only in case something happens to OctoprogramLive.m.
+Output of OctoprogramLiveSave.m. The plots will fill up with data over time while saving that data to the desktop on the Bernard computer. This is to be used as a backup program only in case something happens to OctoprogramLive.m.
 
 
  ![Fig 4](Images/Fig4.png)
- 
-**Fig. 4** Output of both OctoprogramTimeCheckFunc.m and OctoprogramTimeCheck.m. The user can check any desired time span of environmental sensor data with these programs.
+
+ Output of both OctoprogramTimeCheckFunc.m and OctoprogramTimeCheck.m. The user can check any desired time span of environmental sensor data with these programs.
