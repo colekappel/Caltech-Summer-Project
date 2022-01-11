@@ -61,36 +61,27 @@ If you do use this program then as fast as possible after uploading the sketch w
 Upload the Arduino sketch. Make sure the real time clock (RTC) is set to the correct time. See the document titled “Arduino Program Documentation.pdf” for instructions uploading the Arduino sketch.
 On the same computer that you uploaded the Arduino sketch - use Bernard at HCST -, run the MATLAB programs. See the document titled “OctoprogramDocumentation.pdf” for instructions using these programs.
 
-Environmental Sensor Locations at HCST
+**Environmental Sensor Locations at HCST**
 
  ![Fig 1](Images/Fig1.png)
 
-Fig. 1 The environmental sensor layout at HCST.
+**Fig. 1** The environmental sensor layout at HCST.
 
 The sensors should be screwed in with plastic screws. If they stop working try surrounding them with non-conducting material/ make sure that they are not touching any conducting metal. Additionally, make sure that the Arduino hardware is not touching any conducting metal. It should be fine inside the plastic box.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ 
 Output of the MATLAB Programs
 
-Fig. 2 Output of OctoprogramLive.m. See “OctoprogramDocumentation.pdf” for more information about this program.
+ 
+ ![Fig 2](Images/Fig2.png)
+ 
+**Fig. 2** Output of OctoprogramLive.m. See “OctoprogramDocumentation.pdf” for more information about this program.
+
+ 
+ ![Fig 3](Images/Fig3.png)
+
+**Fig. 3** Output of OctoprogramLiveSave.m. The plots will fill up with data over time while saving that data to the desktop on the Bernard computer.
 
 
-Fig. 3 Output of OctoprogramLiveSave.m. The plots will fill up with data over time while saving that data to the desktop on the Bernard computer.
-
-
-Fig. 4 Output of both OctoprogramTimeCheckFunc.m and OctoprogramTimeCheck.m. The user can check any desired time span of environmental sensor data with these programs.
+ ![Fig 4](Images/Fig4.png)
+ 
+**Fig. 4** Output of both OctoprogramTimeCheckFunc.m and OctoprogramTimeCheck.m. The user can check any desired time span of environmental sensor data with these programs.
