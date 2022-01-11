@@ -74,12 +74,12 @@ Output of the MATLAB Programs
  
  ![Fig 2](Images/Fig2.png)
  
-**Fig. 2** Output of OctoprogramLive.m. See “OctoprogramDocumentation.pdf” for more information about this program.
+**Fig. 2** Output of OctoprogramLive.m. Plots real time data from HCST.
 
  
  ![Fig 3](Images/Fig3.png)
 
-**Fig. 3** Output of OctoprogramLiveSave.m. The plots will fill up with data over time while saving that data to the desktop on the Bernard computer.
+**Fig. 3** Output of OctoprogramLiveSave.m. The plots will fill up with data over time while saving that data to the desktop on the Bernard computer. This is to be used as a backup program only in case something happens to OctoprogramLive.m.
 
 
  ![Fig 4](Images/Fig4.png)
