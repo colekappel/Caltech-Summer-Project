@@ -1,34 +1,6 @@
 # Caltech-Summer-Project
 Documentation for the applications that comprise the environmental sensing system used by the ET lab at HCST
 
-# Documentation for the Arduino Programs
-
-By: Cole Kappel
-
-**The Main Sketch**
-
-**Metrology_RTC_TimeServer.ino** – This program was first written by Milan in summer 2018, then it was modified by Grady in summer 2019, and finally I modified it in summer, 2021. It is made for environmental sensing at KPIC and at HCST. Right now, people only care about the temperature, humidity and pressure data it acquires, whereas the acceleration data is not accurate enough to be considered.
-
-When you run the program, eight BME680 sensors measure the temperature, humidity and pressure data at the locations that are most sensitive to environmental changes inside the HCST. These sensors measure humidity with 0.008% r.H. resolution, pressure with 0.18Pa resolution and temperature with 0.01◦C resolution. The acceleration noise level is 90mg where 1g=9.8m/s^2. This not precise enough for our application, but in the future, we can hopefully get more precise accelerometers put in the HCST. I didn’t find any that I thought would work for our application that would work with the Arduino hardware.
-
-The environmental sensor data gets uploaded to an IP address and is saved to the SD card on the Arduino. The website/IP address allows you to view all of the saved files on the Arduino. The files with the sensor data are excel files, and they have the format: yyyymmdd.csv where yyyy is the current year, mm is the current month and dd is the current day. You will need to scroll down to the very bottom of the website to view the file for the current day. You can only access the IP address website on the Bernard computer. This is important – the MATLAB programs will only work on the Bernard computer. More precisely, I think that whatever computer the Arduino script is run on is the computer where you will be able to access the IP address and run the MATLAB files, though during my internship I only ever used the Bernard computer, so use that computer to run the Arduino and MATLAB files. 
-
-Right now, the IP address is 192.168.1.3, but if it changes - I’m not sure if it will ever - then you can uncomment the line: #define DEBUG and it will print “server is at <ip address>.” Just make sure to read the comments I left in the sketch that talk about #define DEBUG, because this is important. To view the files that contain the environmental data once you upload the sketch google: 192.168.1.3. This will take you to the “KPIC FIU Environmental Sensing” website.
-
- I edited the program so that it prints the unix time stamp in the last column on the excel files. This is used with the live environment sensing MATLAB program that I made to preload the previous days data.
-
-This program is a two-in-one program. If you uncomment #define SETTIME, then the sketch’s only purpose is to set the time on the real time clock (RTC) and then display that time in the serial port. If you comment #define SETTIME – only do this once the time is set on the real time clock – the sketch has the original intended function of saving the environmental data to the website. The time is set by a time server in this sketch and you have to define the time zone. Right now, it uses PDT.
-
-I changed the program to use pacific daylight time so that the live MATLAB programs I made show the current local time. At daylight savings time, you don’t necessarily need to switch the time to pacific standard time but if you don’t then just know that you will be getting the time stamp in pacific daylight time.
-
-**The Backup Sketch**
-
-**Metrology_RTC_only.ino** – This program is the same exact program as the program above but it uses a different method to set the time. When you run this sketch, the time is pulled from the computer to set the time so all you have to do is uncomment #define SETTIME to set the time so there’s no need to worry about the time zone. The time will be set to the local time. However, in this sketch the time used to set the RTC is pulled from compilation of the program, which means that if you press the reset button in between uploading the time setting sketch and uploading the sketch with #define SETTIME commented then the time will reset to when the sketch was compiled meaning that the time will most likely be off by 5 or so minutes using this method unless you don’t press the reset button or disconnect the Arduino from power in between uploading the time setting sketch and uploading the data saving sketch. My suggestion is to only use this program if something goes wrong with Metrology_RTC_TimeServer.ino.
-
-Though, if something goes wrong with Metrology_RTC_TimeServer.ino, I would suggest contacting Tobias Schofield if he is around, as he helped me on the time server code in that program. Ask him if he can try to debug Metrology_RTC_TimeServer.ino for you. Tell him it’s the program that Cole helped make for KPIC and that you suspect that the time server went down.
-
-If you do use this program then as fast as possible after uploading the sketch with #define SETTIME uncommented, upload the sketch with #define SETTIME commented. Then google the IP address and make sure the time is very close to the actual time. Again, the RTC time will most likely lag by several minutes depending on how fast you upload the sketch after setting the time using this sketch.
-
 # Documentation for the MATLAB Environmental Sensing Programs
 
 By: Cole Kappel
@@ -56,3 +28,30 @@ Location of the program at HCST: C:\Users\ET\Documents\OctoprogramTimeCheck.m.
 **Software**
 All programs have been run and tested using MATLAB R2021a.
 
+# Documentation for the Arduino Programs
+
+By: Cole Kappel
+
+**The Main Sketch**
+
+**Metrology_RTC_TimeServer.ino** – This program was first written by Milan in summer 2018, then it was modified by Grady in summer 2019, and finally I modified it in summer, 2021. It is made for environmental sensing at KPIC and at HCST. Right now, people only care about the temperature, humidity and pressure data it acquires, whereas the acceleration data is not accurate enough to be considered.
+
+When you run the program, eight BME680 sensors measure the temperature, humidity and pressure data at the locations that are most sensitive to environmental changes inside the HCST. These sensors measure humidity with 0.008% r.H. resolution, pressure with 0.18Pa resolution and temperature with 0.01◦C resolution. The acceleration noise level is 90mg where 1g=9.8m/s^2. This not precise enough for our application, but in the future, we can hopefully get more precise accelerometers put in the HCST. I didn’t find any that I thought would work for our application that would work with the Arduino hardware.
+
+The environmental sensor data gets uploaded to an IP address and is saved to the SD card on the Arduino. The website/IP address allows you to view all of the saved files on the Arduino. The files with the sensor data are excel files, and they have the format: yyyymmdd.csv where yyyy is the current year, mm is the current month and dd is the current day. You will need to scroll down to the very bottom of the website to view the file for the current day. You can only access the IP address website on the Bernard computer. This is important – the MATLAB programs will only work on the Bernard computer. More precisely, I think that whatever computer the Arduino script is run on is the computer where you will be able to access the IP address and run the MATLAB files, though during my internship I only ever used the Bernard computer, so use that computer to run the Arduino and MATLAB files. 
+
+Right now, the IP address is 192.168.1.3, but if it changes - I’m not sure if it will ever - then you can uncomment the line: #define DEBUG and it will print “server is at <ip address>.” Just make sure to read the comments I left in the sketch that talk about #define DEBUG, because this is important. To view the files that contain the environmental data once you upload the sketch google: 192.168.1.3. This will take you to the “KPIC FIU Environmental Sensing” website.
+
+ I edited the program so that it prints the unix time stamp in the last column on the excel files. This is used with the live environment sensing MATLAB program that I made to preload the previous days data.
+
+This program is a two-in-one program. If you uncomment #define SETTIME, then the sketch’s only purpose is to set the time on the real time clock (RTC) and then display that time in the serial port. If you comment #define SETTIME – only do this once the time is set on the real time clock – the sketch has the original intended function of saving the environmental data to the website. The time is set by a time server in this sketch and you have to define the time zone. Right now, it uses PDT.
+
+I changed the program to use pacific daylight time so that the live MATLAB programs I made show the current local time. At daylight savings time, you don’t necessarily need to switch the time to pacific standard time but if you don’t then just know that you will be getting the time stamp in pacific daylight time.
+
+**The Backup Sketch**
+
+**Metrology_RTC_only.ino** – This program is the same exact program as the program above but it uses a different method to set the time. When you run this sketch, the time is pulled from the computer to set the time so all you have to do is uncomment #define SETTIME to set the time so there’s no need to worry about the time zone. The time will be set to the local time. However, in this sketch the time used to set the RTC is pulled from compilation of the program, which means that if you press the reset button in between uploading the time setting sketch and uploading the sketch with #define SETTIME commented then the time will reset to when the sketch was compiled meaning that the time will most likely be off by 5 or so minutes using this method unless you don’t press the reset button or disconnect the Arduino from power in between uploading the time setting sketch and uploading the data saving sketch. My suggestion is to only use this program if something goes wrong with Metrology_RTC_TimeServer.ino.
+
+Though, if something goes wrong with Metrology_RTC_TimeServer.ino, I would suggest contacting Tobias Schofield if he is around, as he helped me on the time server code in that program. Ask him if he can try to debug Metrology_RTC_TimeServer.ino for you. Tell him it’s the program that Cole helped make for KPIC and that you suspect that the time server went down.
+
+If you do use this program then as fast as possible after uploading the sketch with #define SETTIME uncommented, upload the sketch with #define SETTIME commented. Then google the IP address and make sure the time is very close to the actual time. Again, the RTC time will most likely lag by several minutes depending on how fast you upload the sketch after setting the time using this sketch.
