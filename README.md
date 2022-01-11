@@ -1,11 +1,11 @@
 # Caltech-Summer-Project
-The applications that comprise the environmental sensing system used by the ET lab at HCST
+Documentation for the applications that comprise the environmental sensing system used by the ET lab at HCST
 
-# Documentation for the Arduino Programs
+**Documentation for the Arduino Programs**
 
 By: Cole Kappel
 
-The Main Sketch
+**The Main Sketch**
 
 Metrology_RTC_TimeServer.ino – This program was first written by Milan in summer 2018, then it was modified by Grady in summer 2019, and finally I modified it in summer, 2021. It is made for environmental sensing at KPIC and at HCST. Right now, people only care about the temperature, humidity and pressure data it acquires, whereas the acceleration data is not accurate enough to be considered.
 
