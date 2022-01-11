@@ -5,8 +5,6 @@ The applications that comprise the environmental sensing system used by the ET l
 
 By: Cole Kappel
 
----------------------------------------Documentation for the Sketches----------------------------------
-
 The Main Sketch
 
 Metrology_RTC_TimeServer.ino – This program was first written by Milan in summer 2018, then it was modified by Grady in summer 2019, and finally I modified it in summer, 2021. It is made for environmental sensing at KPIC and at HCST. Right now, people only care about the temperature, humidity and pressure data it acquires, whereas the acceleration data is not accurate enough to be considered.
@@ -30,7 +28,6 @@ Metrology_RTC_only.ino – This program is the same exact program as the program
 Though, if something goes wrong with Metrology_RTC_TimeServer.ino, I would suggest contacting Tobias Schofield if he is around, as he helped me on the time server code in that program. Ask him if he can try to debug Metrology_RTC_TimeServer.ino for you. Tell him it’s the program that Cole helped make for KPIC and that you suspect that the time server went down.
 
 If you do use this program then as fast as possible after uploading the sketch with #define SETTIME uncommented, upload the sketch with #define SETTIME commented. Then google the IP address and make sure the time is very close to the actual time. Again, the RTC time will most likely lag by several minutes depending on how fast you upload the sketch after setting the time using this sketch.
-![image](https://user-images.githubusercontent.com/62924681/148859496-00416f00-b55a-4284-ba04-0cc5d91e10de.png)
 
 # Documentation for the MATLAB Environmental Sensing Programs
 
@@ -56,4 +53,4 @@ Location of the program at HCST: C:\Users\ET\Documents\OctoprogramTimeCheck.m.
 
 Software
 All programs have been run and tested using MATLAB R2021a.
-![image](https://user-images.githubusercontent.com/62924681/148859611-fecc1cc4-4f23-47b2-9f35-3debdd427a02.png)
+
