@@ -58,8 +58,8 @@ If you do use this program then as fast as possible after uploading the sketch w
 
  # Environmental Sensing System Instructions
 
-Upload the Arduino sketch. Make sure the real time clock (RTC) is set to the correct time. See the document titled “Arduino Program Documentation.pdf” for instructions uploading the Arduino sketch.
-On the same computer that you uploaded the Arduino sketch - use Bernard at HCST -, run the MATLAB programs. See the document titled “OctoprogramDocumentation.pdf” for instructions using these programs.
+Upload the Arduino sketch. Make sure the real time clock (RTC) is set to the correct time. See “Arduino Program Documentation” for instructions uploading the Arduino sketch.
+On the same computer that you uploaded the Arduino sketch - use Bernard at HCST -, run the MATLAB programs. See “OctoprogramDocumentation” for instructions using these programs.
 
 **Environmental Sensor Locations at HCST**
 
