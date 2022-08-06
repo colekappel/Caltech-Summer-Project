@@ -11,8 +11,6 @@ This is the code for the software engineering project that I completed at Caltec
 Location of the program at HCST: C:\Users\ET\Documents\OctoprogramLive.m.
 
  ![Fig 2](Images/Fig2.png)
- 
-**Output of OctoprogramLive.m. Plots real time data from HCST.**
 
 **OctoprogramLiveSave.m** – Use this program if for whatever reason something goes wrong with getting the time stamp on the Arduino. No data is preallocated for this program so when you first open it the plots will be empty and they will fill up over time. This program saves the environmental data on the desktop in the EnviSensData folder, where data is written to excel files with a comprehensive naming convention. If you close any of the figures, the program stops running. Note that the program won’t write any data to the excel files while they are opened so make sure to close the excel files quickly after opening them! For KPIC, you will need to define the IP address used with your computer, for HCST it is 192.168.1.3 (The Arduino website.)
 Location of the program at HCST: C:\Users\ET\Documents\OctoprogramLiveSave.m.
@@ -21,7 +19,7 @@ Location of the program at HCST: C:\Users\ET\Documents\OctoprogramLiveSave.m.
 
 **Output of OctoprogramLiveSave.m. The plots will fill up with data over time while saving that data to the desktop on the Bernard computer. This is to be used as a backup program only in case something happens to OctoprogramLive.m.**
 
-**Time Check:**
+### Time Check
  
 **OctoprogramTimeCheckFunc.m** – This program defines a function which should be called from the command window. Call it like this: OctoprogramTimeCheckFunc(startYr, startMonth, startDay, startHr, endYr, endMonth, endDay, endHr). The start date must be earlier than the end date. The hour should be entered as a number from 1-24. For example, if you want to look at data from August 1st, 2021 at 5pm to August 4th, 2021 at 3am you would type into the command window: 
 OctoprogramTimeCheckFunc(2021, 08, 1, 17, 2021, 08, 4, 3).
@@ -36,14 +34,10 @@ Location of the program at HCST: C:\Users\ET\Documents\OctoprogramTimeCheck.m.
 
  **Output of both OctoprogramTimeCheckFunc.m and OctoprogramTimeCheck.m. The user can check any desired time span of environmental sensor data with these programs.**
 
-**Software**
+### Software
 All programs have been run and tested using MATLAB R2021a.
 
-# Documentation for the Arduino Programs
-
-By: Cole Kappel
-
-**The Main Sketch**
+### Arduino Programs
 
 **Metrology_RTC_TimeServer.ino** – This program was first written by Milan in summer 2018, then it was modified by Grady in summer 2019, and finally I modified it in summer, 2021. It is made for environmental sensing at KPIC and at HCST. Right now, people only care about the temperature, humidity and pressure data it acquires, whereas the acceleration data is not accurate enough to be considered.
 
@@ -59,9 +53,7 @@ This program is a two-in-one program. If you uncomment #define SETTIME, then the
 
 I changed the program to use pacific daylight time so that the live MATLAB programs I made show the current local time. At daylight savings time, you don’t necessarily need to switch the time to pacific standard time but if you don’t then just know that you will be getting the time stamp in pacific daylight time.
 
-**The Backup Sketch**
-
-**Metrology_RTC_only.ino** – This program is the same exact program as the program above but it uses a different method to set the time. When you run this sketch, the time is pulled from the computer to set the time so all you have to do is uncomment #define SETTIME to set the time so there’s no need to worry about the time zone. The time will be set to the local time. However, in this sketch the time used to set the RTC is pulled from compilation of the program, which means that if you press the reset button in between uploading the time setting sketch and uploading the sketch with #define SETTIME commented then the time will reset to when the sketch was compiled meaning that the time will most likely be off by 5 or so minutes using this method unless you don’t press the reset button or disconnect the Arduino from power in between uploading the time setting sketch and uploading the data saving sketch. My suggestion is to only use this program if something goes wrong with Metrology_RTC_TimeServer.ino.
+**Metrology_RTC_only.ino** – This is the backup program in case an error is encountered with the first program. The program is the same exact program as the program above but it uses a different method to set the time. When you run this sketch, the time is pulled from the computer to set the time so all you have to do is uncomment #define SETTIME to set the time so there’s no need to worry about the time zone. The time will be set to the local time. However, in this sketch the time used to set the RTC is pulled from compilation of the program, which means that if you press the reset button in between uploading the time setting sketch and uploading the sketch with #define SETTIME commented then the time will reset to when the sketch was compiled meaning that the time will most likely be off by 5 or so minutes using this method unless you don’t press the reset button or disconnect the Arduino from power in between uploading the time setting sketch and uploading the data saving sketch. My suggestion is to only use this program if something goes wrong with Metrology_RTC_TimeServer.ino.
 
 Though, if something goes wrong with Metrology_RTC_TimeServer.ino, I would suggest contacting Tobias Schofield if he is around, as he helped me on the time server code in that program. Ask him if he can try to debug Metrology_RTC_TimeServer.ino for you. Tell him it’s the program that Cole helped make for KPIC and that you suspect that the time server went down.
 
