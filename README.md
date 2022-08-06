@@ -31,7 +31,6 @@ Location of the program at HCST: C:\Users\ET\Documents\OctoprogramTimeCheck.m.
 
  ![Fig 4](Images/Fig4.png)
 
- **Output of both OctoprogramTimeCheckFunc.m and OctoprogramTimeCheck.m. The user can check any desired time span of environmental sensor data with these programs.**
 
 ### Arduino Programs
 
