@@ -1,11 +1,9 @@
 # Caltech-Summer-Project
-Documentation for the applications that comprise the environmental sensing system used by the ET lab at HCST
+This is the code for the software engineering project that I completed at Caltech. The .ino files were written by other people before the internship and I only editted them to fix errors in the programs. The matlab files were written entirely by me. The goal of the project was to create a live feed of conditions inside the High Contrast High-Resolution Spectroscopy for Segmented Telescopes Testbed (HCST) for the exoplanet technology lab at Caltech. I was able to succesfully write matlab scripts to give live plots of the environment in the HCST which are included in this repository.
 
  ![Fig 1](Images/Fig1.png)
 
 **The environmental sensor layout at HCST.**
-
-This is the code for the software engineering project that I completed at Caltech. The .ino files were written by other people before the internship and I only editted them to fix errors in the programs. The matlab files were written entirely by me. The goal of the project was to create a live feed of conditions inside the High Contrast High-Resolution Spectroscopy for Segmented Telescopes Testbed (HCST) for the exoplanet technology lab at Caltech. I was able to succesfully write matlab scripts to give live plots of the environment in the HCST which are included in this repository.
 
 **Live Plots:**
  
