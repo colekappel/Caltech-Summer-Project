@@ -34,9 +34,6 @@ Location of the program at HCST: C:\Users\ET\Documents\OctoprogramTimeCheck.m.
 
  **Output of both OctoprogramTimeCheckFunc.m and OctoprogramTimeCheck.m. The user can check any desired time span of environmental sensor data with these programs.**
 
-### Software
-All programs have been run and tested using MATLAB R2021a.
-
 ### Arduino Programs
 
 **Metrology_RTC_TimeServer.ino** – This program was first written by Milan in summer 2018, then it was modified by Grady in summer 2019, and finally I modified it in summer, 2021. It is made for environmental sensing at KPIC and at HCST. Right now, people only care about the temperature, humidity and pressure data it acquires, whereas the acceleration data is not accurate enough to be considered.
