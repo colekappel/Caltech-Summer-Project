@@ -5,7 +5,7 @@ This is the code for the software engineering project that I completed at Caltec
 
 **The environmental sensor layout at HCST.**
 
-**Live Plots:**
+### Live Plots
  
 **OctoprogramLive.m** – Plots the past 7 minutes, 3 hours and 24 hours of live sensor data from HCST. This program doesn’t save data, it pulls the data from the Arduino which is accessed through the ip address. The program also preallocates data from the past day so the plots will be full when opened as long as the Arduino has been running for 24 hours before opening the programs. If you close any of the figures, the program stops running. For KPIC, you will need to define the IP address used with your computer, for HCST it is 192.168.1.3 (The Arduino website.)
 Location of the program at HCST: C:\Users\ET\Documents\OctoprogramLive.m.
