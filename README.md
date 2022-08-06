@@ -17,7 +17,6 @@ Location of the program at HCST: C:\Users\ET\Documents\OctoprogramLiveSave.m.
 
  ![Fig 3](Images/Fig3.png)
 
-**Output of OctoprogramLiveSave.m. The plots will fill up with data over time while saving that data to the desktop on the Bernard computer. This is to be used as a backup program only in case something happens to OctoprogramLive.m.**
 
 ### Programs to Plot Environmental Conditions Inside HCST for an Arbitraty Time Period
  
